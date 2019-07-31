@@ -18,8 +18,8 @@ app.get("/api/hello", function (req, res) {
 app.get('/api/whoami', function(req, res) {
   var ipaddress = req.headers['x-forwarded-for'].split(',').slice(0,1).join();
   var language = req.headers['accept-language'];
-  var system = req.headers['user-agent'];
-  res.json({ipaddress: ipaddress, language: language, system: system});
+  var software = req.headers['user-agent'];
+  res.json({ipaddress: ipaddress, language: language, software: software});
 })
 
 // listen for requests :)
